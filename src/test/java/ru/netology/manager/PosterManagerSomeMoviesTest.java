@@ -3,6 +3,7 @@ package ru.netology.manager;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import ru.netology.domain.MovieInfo;
+import ru.netology.repository.ManagerRepository;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
@@ -36,7 +37,7 @@ class PosterManagerSomeMoviesTest {
         manager.add(twelfth);
     }
 
-  @Test
+    @Test
     void addAndGet() {
 
         setUp(manager);
@@ -57,8 +58,6 @@ class PosterManagerSomeMoviesTest {
         MovieInfo[] actual = manager.getLastAdded();
         MovieInfo[] expected = new MovieInfo[]{twelfth, eleventh, tenth, ninth, eighth};
 
-       assertArrayEquals(expected, actual);
+        assertArrayEquals(expected, actual);
     }
 }
-
-
